@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Location Music Store
 
-## Getting Started
+Un site web moderne et professionnel pour Location Music Store, spécialisé dans la location de matériel son et lumière pour événements (mariages, anniversaires, événements d'entreprise) dans la région de Redon et Rennes.
 
-First, run the development server:
+## Technologies utilisées
+
+- **Next.js 15** avec App Router
+- **TypeScript** pour la sécurité des types
+- **Tailwind CSS** pour le styling
+- **React Hook Form** avec validation Zod
+- **Lucide React** pour les icônes
+- **pnpm** comme gestionnaire de packages
+
+## Fonctionnalités
+
+### Pages principales
+
+- **Accueil** : Hero section, aperçu des services, showcase du matériel, témoignages clients
+- **Services** : Description détaillée des services, packages de location, tarification
+- **À propos** : Histoire de l'entreprise, valeurs, zone d'intervention
+- **Contact** : Formulaire de contact avec validation, informations de contact, horaires
+
+### Caractéristiques techniques
+
+- ✅ Design responsive mobile-first
+- ✅ Mode sombre/clair automatique
+- ✅ Server Components pour les performances optimales
+- ✅ Server Actions pour la soumission de formulaires
+- ✅ Validation complète avec Zod
+- ✅ SEO optimisé avec métadonnées
+- ✅ Sitemap et robots.txt générés automatiquement
+- ✅ Composants UI réutilisables
+- ✅ Animations et transitions fluides
+- ✅ Accessible (WCAG 2.1 AA)
+
+## Installation
+
+1. Cloner le repository
+2. Installer les dépendances :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Lancer le serveur de développement :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur
 
-## Learn More
+## Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+location-music-store/
+├── app/                      # Pages et routes Next.js
+│   ├── about/               # Page À propos
+│   ├── contact/             # Page Contact
+│   ├── services/            # Page Services
+│   ├── layout.tsx           # Layout racine
+│   ├── page.tsx             # Page d'accueil
+│   ├── globals.css          # Styles globaux
+│   ├── sitemap.ts           # Configuration sitemap
+│   └── robots.ts            # Configuration robots.txt
+├── components/
+│   ├── ui/                  # Composants UI réutilisables
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   ├── textarea.tsx
+│   │   └── label.tsx
+│   └── sections/            # Sections de pages
+│       ├── navigation.tsx
+│       ├── footer.tsx
+│       ├── hero.tsx
+│       ├── services-overview.tsx
+│       ├── equipment-showcase.tsx
+│       ├── testimonials.tsx
+│       ├── cta.tsx
+│       └── contact-form.tsx
+├── lib/
+│   ├── utils.ts             # Utilitaires
+│   └── actions.ts           # Server Actions
+└── public/                  # Assets statiques
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts disponibles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Développement
+pnpm dev
 
-## Deploy on Vercel
+# Build de production
+pnpm build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Démarrer en production
+pnpm start
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Linter
+pnpm lint
+```
+
+## Formulaire de contact
+
+Le formulaire de contact utilise :
+- React Hook Form pour la gestion du formulaire
+- Zod pour la validation des données
+- Server Actions Next.js pour la soumission côté serveur
+- Affichage des messages de succès/erreur
+- Progressive enhancement
+
+Actuellement, les soumissions sont loggées dans la console. Pour la production, vous devrez :
+1. Configurer un service d'envoi d'emails (ex: SendGrid, Resend, Nodemailer)
+2. Ou connecter à un CRM/base de données
+3. Mettre à jour `lib/actions.ts` avec votre logique d'envoi
+
+## Personnalisation
+
+### Couleurs
+
+Les couleurs principales peuvent être modifiées dans `app/globals.css` :
+- `--primary`: Couleur principale (violet par défaut)
+- `--accent`: Couleur d'accentuation (orange par défaut)
+
+### Contenu
+
+Mettez à jour le contenu dans les fichiers de composants et de pages :
+- Textes dans les composants de sections
+- Témoignages clients dans `components/sections/testimonials.tsx`
+- Informations de contact dans `components/sections/footer.tsx` et `app/contact/page.tsx`
+
+### Métadonnées SEO
+
+Modifiez les métadonnées dans `app/layout.tsx` et dans chaque page.
+
+## Déploiement
+
+### Vercel (recommandé)
+
+1. Push le code sur GitHub
+2. Importer le projet sur [Vercel](https://vercel.com)
+3. Déployer automatiquement
+
+### Autres plateformes
+
+Le site peut être déployé sur toute plateforme supportant Next.js :
+- Netlify
+- AWS Amplify
+- Railway
+- Render
+
+Suivez les instructions de déploiement Next.js pour votre plateforme choisie.
+
+## Variables d'environnement
+
+Pour la production, vous pourriez avoir besoin de :
+
+```env
+# API Email (exemple)
+SENDGRID_API_KEY=votre_clé
+EMAIL_TO=contact@locationmusicstore.fr
+
+# Base de données (si nécessaire)
+DATABASE_URL=votre_url
+```
+
+## Support navigateurs
+
+- Chrome (dernières 2 versions)
+- Firefox (dernières 2 versions)
+- Safari (dernières 2 versions)
+- Edge (dernières 2 versions)
+
+## License
+
+Propriétaire - Location Music Store
+
+## Contact
+
+Pour toute question concernant le code :
+- Email : contact@locationmusicstore.fr
+- Instagram : @locationmusicstore
