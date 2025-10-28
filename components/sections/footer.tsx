@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -11,9 +12,13 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-white rounded-md flex items-center justify-center">
-                  <span className="text-navy font-black text-xl">L</span>
-                </div>
+                <Image
+                  src="/logo.webp"
+                  alt="Location Music Store"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-500 tracking-wider">VIVEZ CRÉATIF</span>
                   <span className="text-lg font-black text-white tracking-tight">
@@ -66,6 +71,14 @@ export default function Footer() {
                 >
                   Contact
                 </a>
+              </li>
+              <li>
+                <Link
+                  href="/mentions-legales"
+                  className="hover:text-primary transition-colors duration-200 text-sm"
+                >
+                  Mentions Légales
+                </Link>
               </li>
             </ul>
           </div>
