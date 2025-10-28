@@ -92,10 +92,10 @@ export default function Home() {
                         Email
                       </h3>
                       <a
-                        href="mailto:contact@locationmusicstore.fr"
+                        href="mailto:contact@locationmusicstore.com"
                         className="text-slate-300 hover:text-primary transition-colors duration-200"
                       >
-                        contact@locationmusicstore.fr
+                        contact@locationmusicstore.com
                       </a>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ export default function Home() {
                         Zone de couverture
                       </h3>
                       <p className="text-slate-300">
-                        Redon, Rennes et environs
+                        Redon, Rennes, La Baule et environs
                       </p>
                     </div>
                   </div>
@@ -145,7 +145,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-primary">✓</span>
-                    <span>Livraison et installation incluses</span>
+                    <span>Livraison et installation possibles</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-primary">✓</span>

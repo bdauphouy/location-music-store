@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://locationmusicstore.fr";
+  const baseUrl = "https://locationmusicstore.com";
 
   return [
     {
@@ -11,22 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/mentions-legales`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
   ];
 }

@@ -34,7 +34,7 @@ export default function Hero() {
           <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm px-6 py-3 rounded-full mb-12 animate-fade-in border border-primary/20">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
-              Redon & Rennes
+              Redon, Rennes & La Baule
             </span>
           </div>
 
@@ -50,9 +50,6 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2">
             Location de matériel son et lumière professionnel pour tous vos
             événements.
-            <span className="block mt-2 text-lg text-slate-400">
-              Livraison et installation incluses.
-            </span>
           </p>
 
           {/* CTA Buttons */}

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://locationmusicstore.fr/sitemap.xml",
+    sitemap: "https://locationmusicstore.com/sitemap.xml",
   };
 }

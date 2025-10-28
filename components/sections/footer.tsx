@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
-import { Instagram, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +20,9 @@ export default function Footer() {
                   className="w-12 h-12 object-contain"
                 />
                 <div className="flex flex-col">
-                  <span className="text-xs text-slate-500 tracking-wider">VIVEZ CRÉATIF</span>
+                  <span className="text-xs text-slate-500 tracking-wider">
+                    VIVEZ CRÉATIF
+                  </span>
                   <span className="text-lg font-black text-white tracking-tight">
                     LOCATION MUSIC STORE
                   </span>
@@ -46,7 +48,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-black mb-6 uppercase tracking-wide text-sm">Navigation</h3>
+            <h3 className="text-white font-black mb-6 uppercase tracking-wide text-sm">
+              Navigation
+            </h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -84,14 +88,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-black mb-6 uppercase tracking-wide text-sm">Contact</h3>
+            <h3 className="text-white font-black mb-6 uppercase tracking-wide text-sm">
+              Contact
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-primary" />
-                <span className="text-sm">Région Redon / Rennes</span>
+                <MapPin
+                  size={18}
+                  className="mt-0.5 flex-shrink-0 text-primary"
+                />
+                <span className="text-sm">
+                  Région Redon / Rennes / La Baule
+                </span>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone size={18} className="mt-0.5 flex-shrink-0 text-primary" />
+                <Phone
+                  size={18}
+                  className="mt-0.5 flex-shrink-0 text-primary"
+                />
                 <a
                   href="tel:+33783271173"
                   className="text-sm hover:text-primary transition-colors duration-200"
@@ -102,10 +116,10 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="mt-0.5 flex-shrink-0 text-primary" />
                 <a
-                  href="mailto:contact@locationmusicstore.fr"
+                  href="mailto:contact@locationmusicstore.com"
                   className="text-sm hover:text-primary transition-colors duration-200"
                 >
-                  contact@locationmusicstore.fr
+                  contact@locationmusicstore.com
                 </a>
               </li>
             </ul>
@@ -113,8 +127,17 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-slate-500">
-          <p>
-            © {currentYear} Location Music Store. Tous droits réservés.
+          <p>© {currentYear} Location Music Store. Tous droits réservés.</p>
+          <p className="mt-2">
+            Développé par{" "}
+            <a
+              href="https://bdau.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              bdau.fr
+            </a>
           </p>
         </div>
       </div>

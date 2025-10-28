@@ -104,6 +104,7 @@ pnpm lint
 ## Formulaire de contact
 
 Le formulaire de contact utilise :
+
 - React Hook Form pour la gestion du formulaire
 - Zod pour la validation des données
 - Server Actions Next.js pour la soumission côté serveur
@@ -111,6 +112,7 @@ Le formulaire de contact utilise :
 - Progressive enhancement
 
 Actuellement, les soumissions sont loggées dans la console. Pour la production, vous devrez :
+
 1. Configurer un service d'envoi d'emails (ex: SendGrid, Resend, Nodemailer)
 2. Ou connecter à un CRM/base de données
 3. Mettre à jour `lib/actions.ts` avec votre logique d'envoi
@@ -120,12 +122,14 @@ Actuellement, les soumissions sont loggées dans la console. Pour la production,
 ### Couleurs
 
 Les couleurs principales peuvent être modifiées dans `app/globals.css` :
+
 - `--primary`: Couleur principale (violet par défaut)
 - `--accent`: Couleur d'accentuation (orange par défaut)
 
 ### Contenu
 
 Mettez à jour le contenu dans les fichiers de composants et de pages :
+
 - Textes dans les composants de sections
 - Témoignages clients dans `components/sections/testimonials.tsx`
 - Informations de contact dans `components/sections/footer.tsx` et `app/contact/page.tsx`
@@ -145,6 +149,7 @@ Modifiez les métadonnées dans `app/layout.tsx` et dans chaque page.
 ### Autres plateformes
 
 Le site peut être déployé sur toute plateforme supportant Next.js :
+
 - Netlify
 - AWS Amplify
 - Railway
@@ -159,7 +164,7 @@ Pour la production, vous pourriez avoir besoin de :
 ```env
 # API Email (exemple)
 SENDGRID_API_KEY=votre_clé
-EMAIL_TO=contact@locationmusicstore.fr
+EMAIL_TO=contact@locationmusicstore.com
 
 # Base de données (si nécessaire)
 DATABASE_URL=votre_url
@@ -179,5 +184,6 @@ Propriétaire - Location Music Store
 ## Contact
 
 Pour toute question concernant le code :
-- Email : contact@locationmusicstore.fr
+
+- Email : contact@locationmusicstore.com
 - Instagram : @locationmusicstore

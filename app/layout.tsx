@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title:
-    "Location Music Store - Location Matériel Son & Lumière Professionnel | Redon & Rennes",
+    "Location Music Store - Location Matériel Son & Lumière Professionnel | Redon, Rennes & La Baule",
   description:
-    "Location de matériel son et lumière professionnel pour mariages, anniversaires et événements d&apos;entreprise. Enceintes JBL IRX 3100W, subwoofer, lumières d&apos;ambiance, machine à fumée. Livraison et installation incluses à Redon, Rennes et environs. Devis gratuit sous 48h.",
+    "Location de matériel son et lumière professionnel pour mariages, anniversaires et événements d&apos;entreprise. Enceintes JBL IRX 3100W, subwoofer, lumières d&apos;ambiance, machine à fumée. Livraison et installation possibles à Redon, Rennes, La Baule et environs. Devis gratuit sous 48h.",
   keywords: [
     "location matériel son",
     "location enceintes",
@@ -47,15 +47,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://locationmusicstore.fr"),
+  metadataBase: new URL("https://locationmusicstore.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Location Music Store - Matériel Son & Lumière Pro | Redon & Rennes",
+    title:
+      "Location Music Store - Matériel Son & Lumière Pro | Redon, Rennes & La Baule",
     description:
       "Location de matériel son et lumière professionnel pour tous vos événements. Enceintes JBL 3100W, subwoofer, lumières, machine à fumée. Livraison incluse à Redon et Rennes.",
-    url: "https://locationmusicstore.fr",
+    url: "https://locationmusicstore.com",
     siteName: "Location Music Store",
     images: [
       {
