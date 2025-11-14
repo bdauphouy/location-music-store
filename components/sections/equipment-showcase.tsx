@@ -11,6 +11,7 @@ import {
   UtensilsCrossed,
   Wind,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const speakerPacks = [
@@ -19,24 +20,28 @@ const speakerPacks = [
     description: "JBL IRX 1300W x2 + Subwoofer 500W",
     price: "90€",
     power: "3100W",
+    image: "/images/pack-1.png",
   },
   {
     name: "Pack 2",
     description: "JBL IRX 1300W x2",
     price: "70€",
     power: "2600W",
+    image: "/images/pack-2.png",
   },
   {
     name: "Pack 3",
     description: "JBL IRX 1300W + Subwoofer 500W",
     price: "60€",
     power: "1800W",
+    image: "/images/pack-3.png",
   },
   {
     name: "Pack 4",
     description: "Woodbrass 200W x2",
     price: "60€",
     power: "400W",
+    image: "/images/pack-4.png",
   },
 ];
 
@@ -46,36 +51,42 @@ const supplements = [
     name: "Mange Debout",
     description: "Loué avec ses housses noires",
     price: "8€",
+    image: "/images/mange-debout.png",
   },
   {
     icon: Lightbulb,
     name: "Lumières d'ambiance",
     description: "Calibrée sur la musique",
     price: "15€",
+    image: "/images/lumieres-ambiance.png",
   },
   {
     icon: Mic,
     name: "Microphone",
     description: "Sans fil ou filaire selon les besoins",
     price: "15€",
+    image: "/images/microphone.png",
   },
   {
     icon: Wind,
     name: "Machine à fumée",
     description: "Liquide compris avec",
     price: "20€",
+    image: "/images/machine-fumee.png",
   },
   {
     icon: Projector,
     name: "Vidéoprojecteur",
     description: "Avec câble HDMI",
     price: "10€",
+    image: "/images/videoprojecteur.png",
   },
   {
     icon: Sparkles,
     name: "Boule à facettes",
     description: "Avec projecteur LED",
     price: "20€",
+    image: null,
   },
   {
     icon: Tent,
@@ -83,6 +94,7 @@ const supplements = [
     description: "4x4m avec parois latérales",
     price: "70€",
     tag: "Bientôt disponible",
+    image: null,
   },
 ];
 
@@ -113,6 +125,14 @@ export default function EquipmentShowcase() {
                 } relative overflow-hidden cursor-pointer`}
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+                <div className="relative w-full size-60 overflow-hidden">
+                  <Image
+                    src={pack.image}
+                    alt={pack.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <CardContent className="pt-6 pb-4 relative">
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-4">
@@ -163,7 +183,7 @@ export default function EquipmentShowcase() {
               return (
                 <Link href="#contact" key={index}>
                   <Card
-                    className={`group bg-navy-light border-slate-700 hover:border-accent transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 animate-fade-in-up stagger-${
+                    className={`group bg-navy-light h-full border-slate-700 hover:border-accent transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 animate-fade-in-up stagger-${
                       index + 5
                     } cursor-pointer relative overflow-hidden`}
                   >
@@ -172,6 +192,16 @@ export default function EquipmentShowcase() {
                         {item.tag}
                       </div>
                     )}
+                    <div className="relative w-full size-60 overflow-hidden">
+                      {item.image && (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-contain"
+                        />
+                      )}
+                    </div>
                     <CardContent className="pt-6">
                       <div className="mb-4">
                         <Icon className="w-10 h-10 text-accent group-hover:scale-110 transition-transform duration-300 mb-4" />
