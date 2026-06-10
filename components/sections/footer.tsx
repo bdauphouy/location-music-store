@@ -17,7 +17,7 @@ export default function Footer() {
                   alt="Location Music Store"
                   width={48}
                   height={48}
-                  className="w-12 h-12 object-contain"
+                  className="w-12 h-12 object-contain rounded-full"
                 />
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-500 tracking-wider">

@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -50,7 +50,7 @@ export default function Testimonials() {
 
         {/* Featured testimonial - Large centered card */}
         <div className="max-w-4xl mx-auto mb-12">
-          <div className="bg-gradient-to-br from-navy-light to-navy border-2 border-primary/30 rounded-md p-10 md:p-12 relative animate-scale-in stagger-1">
+          <div className="bg-gradient-to-br from-navy-light to-navy border-2 border-primary/30 rounded-md p-6 md:p-12 relative animate-scale-in stagger-1">
             <Quote className="w-16 h-16 text-primary/20 absolute top-8 right-8" />
 
             <div className="flex items-center space-x-2 mb-6">
@@ -73,7 +73,9 @@ export default function Testimonials() {
                 <p className="font-black text-white text-lg uppercase">
                   {testimonials[0].name}
                 </p>
-                <p className="text-slate-400 text-sm">{testimonials[0].event}</p>
+                <p className="text-slate-400 text-sm">
+                  {testimonials[0].event}
+                </p>
               </div>
             </div>
           </div>
@@ -84,14 +86,11 @@ export default function Testimonials() {
           {testimonials.slice(1).map((testimonial, index) => (
             <div
               key={index}
-              className={`bg-navy-light border border-slate-700 rounded-md p-8 animate-slide-in-${index === 0 ? 'left' : 'right'} stagger-${index + 2}`}
+              className={`bg-navy-light border border-slate-700 rounded-md p-6 animate-slide-in-${index === 0 ? "left" : "right"} stagger-${index + 2}`}
             >
               <div className="flex items-center space-x-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-accent text-accent"
-                  />
+                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                 ))}
               </div>
 
@@ -124,7 +123,9 @@ export default function Testimonials() {
             <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
             <div className="text-center">
               <span className="text-4xl font-black text-white">50+</span>
-              <span className="text-slate-300 text-lg ml-2">clients satisfaits</span>
+              <span className="text-slate-300 text-lg ml-2">
+                clients satisfaits
+              </span>
             </div>
           </div>
         </div>

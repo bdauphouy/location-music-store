@@ -39,7 +39,7 @@ export default function Home() {
 
               {/* Contact info cards */}
               <div className="space-y-6">
-                <div className="bg-navy-light border border-slate-700 p-6 rounded-md hover:border-primary transition-all duration-300 group">
+                <div className="bg-navy-light border border-slate-700 p-4 rounded-md hover:border-primary transition-all duration-300 group">
                   <div className="flex items-center space-x-4">
                     <div className="bg-primary/10 p-3 rounded-md group-hover:bg-primary/20 transition-colors duration-300">
                       <svg
@@ -70,7 +70,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="bg-navy-light border border-slate-700 p-6 rounded-md hover:border-primary transition-all duration-300 group">
+                <div className="bg-navy-light border border-slate-700 p-4 rounded-md hover:border-primary transition-all duration-300 group">
                   <div className="flex items-center space-x-4">
                     <div className="bg-primary/10 p-3 rounded-md group-hover:bg-primary/20 transition-colors duration-300">
                       <svg
@@ -101,7 +101,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="bg-navy-light border border-slate-700 p-6 rounded-md hover:border-primary transition-all duration-300 group">
+                <div className="bg-navy-light border border-slate-700 p-4 rounded-md hover:border-primary transition-all duration-300 group">
                   <div className="flex items-center space-x-4">
                     <div className="bg-primary/10 p-3 rounded-md group-hover:bg-primary/20 transition-colors duration-300">
                       <svg
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
 
               {/* Trust indicators */}
-              <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-md">
+              <div className="mt-12 p-4 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-md">
                 <ul className="space-y-2 text-slate-300 text-sm">
                   <li className="flex items-center space-x-2">
                     <span className="text-primary">✓</span>
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
 
             {/* Right side - Form */}
-            <div className="bg-navy-light border border-slate-700 p-8 md:p-10 rounded-md animate-fade-in-up stagger-1 hover:border-primary/50 transition-all duration-300">
+            <div className="bg-navy-light border border-slate-700 p-6 rounded-md animate-fade-in-up stagger-1 hover:border-primary/50 transition-all duration-300">
               <ContactForm />
             </div>
           </div>
